@@ -2,20 +2,20 @@
 # Please use spacing between terms
 
 
-def eval_linear(expression: str) -> int:
-    coeffs = []
+def eval_linear(expression: str) -> float | int:
+    terms = []
     op = ""
 
     for i in exp.split(" "):
         if i == "-" or i == "+" or i == "/" or i == "*":
             op = i
         elif not op == "":
-            coeffs.append(str(op) + str(i))
+            terms.append(str(op) + str(i))
             op = ""
         else:
-            coeffs.append(i)
+            terms.append(i)
 
-    for i in coeffs:
+    for i in terms:
         if any(c.isalpha() for c in i):
             if len(i) == 1:
                 coeff = 1
