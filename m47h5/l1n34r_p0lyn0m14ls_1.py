@@ -1,9 +1,7 @@
-import re
-
 exp = input("expression : ")
 coeffs = []
-
 op = ''
+
 for i in exp.split(' '):
     if i == '-' or i == '+' or i == '/' or i == '*':
         op = i
