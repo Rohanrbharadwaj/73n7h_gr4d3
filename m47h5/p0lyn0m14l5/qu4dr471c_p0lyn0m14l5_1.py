@@ -35,9 +35,20 @@ beta = 0
 
 #alpha + beta = -b/a
 #alpha * beta = c/a
-#zero = (-b +- abs(sqrt(coeffb^2 - 4*coeffa*const)))/2*coeffa
+#zero = (-b +- sqrt(coeffb^2 - 4*coeffa*const))/2*coeffa
 
 reality = coeffb^2 - 4 * coeffa * const
 
 if reality == 0 :
     zero = - coeffb / 2 * coeffa
+    print("\n the zeroes are real and identitical")
+    print("α = β = ", zero)
+elif reality > 0 :
+    rooted = sqrt(abs(reality))
+    alph = - coeffb + rooted / 2 * coeffa
+    beta = - coeffb - rooted / 2 * coeffa
+    print("\n the zeroes are real and unique")
+    print("α = ", alph)
+    print("β = ", beta)
+else :
+    print("the zeroes are unreal")
