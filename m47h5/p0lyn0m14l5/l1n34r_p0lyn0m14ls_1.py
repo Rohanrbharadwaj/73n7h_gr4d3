@@ -2,14 +2,14 @@
 # Please use spacing between terms
 
 
-def eval_linear(expression: str) -> float | int:
+def eval_linear(expression: str) -> int:
     terms = []
     op = ""
 
     for i in exp.split(" "):
         if i == "-" or i == "+" or i == "/" or i == "*":
             op = i
-        elif not op == "":
+        elif op:
             terms.append(str(op) + str(i))
             op = ""
         else:
