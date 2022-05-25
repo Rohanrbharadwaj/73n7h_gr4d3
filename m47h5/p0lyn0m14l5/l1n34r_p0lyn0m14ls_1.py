@@ -1,3 +1,6 @@
+#this program finds the zero of a linear polynomial
+#please use spacing between terms 
+
 exp = input("expression : ")
 coeffs = []
 op = ''
